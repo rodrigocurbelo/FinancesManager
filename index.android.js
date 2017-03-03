@@ -1,28 +1,20 @@
 import React, { Component } from 'react';
+import { Scene, Router } from 'react-native-router-flux';
 import {
   AppRegistry,
-  StyleSheet,
   View,
 } from 'react-native';
 
 import Login from './components/Login';
 
-console.log('hola', Login)
-
 export default class FinancesManager extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Login />
-      </View>
+      <Router>
+        <Scene key="login" component={Login} title="Login" initial={true} hideNavBar={true} />
+      </Router>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 AppRegistry.registerComponent('FinancesManager', () => FinancesManager);
