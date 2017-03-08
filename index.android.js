@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import Login from './components/Login';
+import Login from './src/components/Login';
 
 export default class FinancesManager extends Component {
   render() {
